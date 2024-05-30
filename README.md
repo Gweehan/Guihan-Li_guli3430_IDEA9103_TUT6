@@ -38,7 +38,7 @@ Through this design, I want the joy of the harvest and let the audience feel the
 4. The parts of my code that primarily animate the image include the fireworks effect and the movement of the center of the canvas. I made larger changes to increase interactivity and dynamic effects than the initial group code. By making these improvements, my code added richer dynamic effects and user interactivity, making the work visually more vivid and distinctly different from the work of other group members. While other group members' work may focus on color changes or component resizing of static images, my work enhances the overall interactive experience and visual impact through fireworks effects and dynamic changes in canvas position.
 
 - **Major Changes and Animated Properties**
-   - Differentiating from our group's WORK, I added a fireworks effect that generates fireworks when the user clicks on the canvas. Each firework object will explode in the air, generating multiple particles that will change color randomly and gradually fall under gravity, simulating the natural firework effect.
+   - Differentiating from our group's work, I added a fireworks effect that generates fireworks when the user clicks on the canvas. Each firework object will explode in the air, generating multiple particles that will change color randomly and gradually fall under gravity, simulating the natural firework effect.
 
    - In our work, the position of the image on the canvas is fixed, and there is no movement effect. In my personal work, I added the ability to control the center of the canvas using the arrow keys. When the user presses the arrow keys, the center of the canvas will move in the corresponding direction, making the image more dynamic and interactive.
 
