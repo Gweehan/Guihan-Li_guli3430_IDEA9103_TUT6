@@ -34,8 +34,7 @@ In this work, I aim to create an atmosphere of joy and harvest through dynamic f
 
 Through this design, I want the joy of the harvest and let the audience feel the immersive atmosphere of celebration. Each interaction is full of surprise and anticipation, just like the endless hope and joy that the harvest season brings. Through the combination of fireworks and fall elements, my work highlights the theme of harvest and the hope for life and the future.
 
-4. 
-The parts of my code that primarily animate the image include the fireworks effect and the movement of the center of the canvas. I made larger changes to increase interactivity and dynamic effects than the initial group code. By making these improvements, my code added richer dynamic effects and user interactivity, making the work visually more vivid and distinctly different from the work of other group members. While other group members' work may focus on color changes or component resizing of static images, my work enhances the overall interactive experience and visual impact through fireworks effects and dynamic changes in canvas position.
+4. The parts of my code that primarily animate the image include the fireworks effect and the movement of the center of the canvas. I made larger changes to increase interactivity and dynamic effects than the initial group code. By making these improvements, my code added richer dynamic effects and user interactivity, making the work visually more vivid and distinctly different from the work of other group members. While other group members' work may focus on color changes or component resizing of static images, my work enhances the overall interactive experience and visual impact through fireworks effects and dynamic changes in canvas position.
 
 Major Changes and Animated Properties
 
