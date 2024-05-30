@@ -2,12 +2,12 @@ let centerX, centerY;
 let moveX = 0;
 let moveY = 0;
 let particles = [];
-const gravity = 0.1;
-const colors = ['#C15B5C', 'purple', '#F8E8B6', 'lime', 'cyan', 'magenta', '#6F8F6A'];
+const gravity = 0.09;
+const colors = ['#FFD700', 'purple', '#DDA328', 'lime', 'cyan', 'magenta', '#FF8C00'];
 let endColor;
 
 function setup() {
-  createCanvas(600, 800);
+  createCanvas(windowWidth, windowHeight);
   background(148, 177, 169); 
 
   pixelDensity(1);
@@ -15,7 +15,7 @@ function setup() {
 
   // Central position
   centerX = width / 2;
-  centerY = 400;
+  centerY = height / 2;
 
   // Initial drawing
   drawTree();
@@ -27,12 +27,19 @@ function draw() {
   centerY += moveY;
 
   // Clear and redraw the scene
-  background(148, 177, 169);
+  background(165, 42, 42);
   drawTree();
   drawFireworks();
 }
 
-// Handle keyboard input
+//The processing window resizes, resizes the canvas and updates the center position
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  centerX = width / 2;
+  centerY = height / 2;
+}
+
+//Handles arrow key press and release events, updating the movement speed
 function keyPressed() {
   if (key === 'ArrowUp') {
     moveY = -5;
@@ -53,18 +60,19 @@ function keyReleased() {
   }
 }
 
+//Handles mouse click events and creates firework particles
 function mousePressed() {
   particles.push(new Firework(mouseX, height));
 }
 
 function drawTree() {
   // Colors
-  let green = '#6F8F6A';
-  let red = '#C15B5C';
-  let yellow = '#F8E8B6';
+  let orange = '#FF8C00';
+  let red = '#FFD700';
+  let yellow = '#DDA328';
 
   // Draw the background rectangle with a different color
-  drawBackgroundRect(50, 50, width - 100, height - 100, color(49, 74, 85));
+  drawBackgroundRect(50, 50, width - 100, height - 100, color(0,0,0));
 
   // List of diameters of circles
   let diameters = [80, 50, 30, 60];
@@ -88,14 +96,14 @@ function drawTree() {
 
   push();
   // Draw the bottom rectangle here
-  drawBottomRectangles(centerX, centerY + 1.11 * diameters[1] + diameters[2] + diameters[3], 300, 50, green, yellow);
+  drawBottomRectangles(centerX, centerY + 1.11 * diameters[1] + diameters[2] + diameters[3], 300, 50, orange, yellow);
 
-  // Draw a small green rectangle over the yellow rectangle
-  fill(green); 
+  // Draw a small orange rectangle over the yellow rectangle
+  fill(orange); 
   noStroke();
   rect(centerX - 105, centerY + 1.7 * diameters[1] + diameters[2] + diameters[3], 50, 60);
   
-  // Draw a small yellow circle on the small green rectangle
+  // Draw a small yellow circle on the small orange rectangle
   fill(yellow); 
   noStroke();
   ellipse(centerX - 80, centerY + 2.3 * diameters[1] + diameters[2] + diameters[3], 50);
@@ -107,7 +115,6 @@ function drawTree() {
   // Draw a small yellow circle over the small red rectangle
   fill(yellow); 
   ellipse(centerX + 85, centerY + 2.2 * diameters[1] + diameters[2] + diameters[3], 60);
-  
   pop();  
 
   push()
@@ -121,7 +128,7 @@ function drawTree() {
   drawSplitCircleLR(centerX, centerY + 1.71 * diameters[1] + diameters[2] + diameters[3], diameters[1]);
   drawLine(centerX, centerY + 1.71 * diameters[1] + diameters[2] + diameters[3] + diameters[1] / 2, centerX, centerY - 1.68 * diameters[0] - diameters[0] / 2);
 
-  // Draw more middle bottom square, using red on top and green on bottom
+  // Draw more middle bottom square, using red on top and orange on bottom
   drawSplitCircleTopRed(centerX + 0.8 * diameters[1], centerY + 1.71 * diameters[1] + diameters[2] + diameters[3], diameters[3]);
   drawSplitCircleTopRed(centerX + 1.7 * diameters[1], centerY + 1.71 * diameters[1] + diameters[2] + diameters[3], diameters[0]);
   drawSplitCircleTopRed(centerX - 0.8 * diameters[1], centerY + 1.71 * diameters[1] + diameters[2] + diameters[3], diameters[3]);
@@ -132,10 +139,10 @@ function drawTree() {
   diameters = [30, 50, 80, 60];
 
   // Right side vertical circle
-  drawSplitCircleLR(centerX + 1.26 * diameters[2] + diameters[0]+diameters[3]/2, centerY - 1.8 * diameters[0]+diameters[2]*0.1, diameters[1]);
-  drawSplitCircleLR(centerX + 1.26 * diameters[2] + diameters[0]+diameters[3]/2, centerY - 1.48 * diameters[0] - diameters[1]+diameters[2]*0.1, diameters[0]);
-  drawSplitCircleLR(centerX + 1.26 * diameters[2] + diameters[0]+diameters[3]/2, centerY - 0.65 * diameters[0] - diameters[1] - diameters[2]+diameters[2]*0.1, diameters[2]);
-  drawLine(centerX + 1.26 * diameters[2] + diameters[0]+diameters[3]/2, centerY, centerX + 1.26 * diameters[2] + diameters[0]+diameters[3]/2, centerY - 0.65 * diameters[0] - diameters[1] - diameters[2]+diameters[2]*0.1-diameters[2]/2);
+  drawSplitCircleLR(centerX + 1.26 * diameters[2] + diameters[0] + diameters[3] / 2, centerY - 1.8 * diameters[0] + diameters[2] * 0.1, diameters[1]);
+  drawSplitCircleLR(centerX + 1.26 * diameters[2] + diameters[0] + diameters[3] / 2, centerY - 1.48 * diameters[0] - diameters[1] + diameters[2] * 0.1, diameters[0]);
+  drawSplitCircleLR(centerX + 1.26 * diameters[2] + diameters[0] + diameters[3] / 2, centerY - 0.65 * diameters[0] - diameters[1] - diameters[2] + diameters[2] * 0.1, diameters[2]);
+  drawLine(centerX + 1.26 * diameters[2] + diameters[0] + diameters[3] / 2, centerY, centerX + 1.26 * diameters[2] + diameters[0] + diameters[3] / 2, centerY - 0.65 * diameters[0] - diameters[1] - diameters[2] + diameters[2] * 0.1 - diameters[2] / 2);
   pop()
 
   // Draw background texture
@@ -145,16 +152,17 @@ function drawTree() {
   }
 }
 
+//Helper functions for drawing various graphical elements
 function drawBackgroundRect(x, y, width, height, color) {
   fill(color);
   rect(x, y, width, height);
 }
 
-function drawBottomRectangles(centerX, y, rectWidth, rectHeight, green, yellow) {
+function drawBottomRectangles(centerX, y, rectWidth, rectHeight, orange, yellow) {
   let totalWidth = rectWidth * 3;
   let startX = centerX - totalWidth / 2;
   
-  fill(green);
+  fill(orange);
   noStroke();
   rect(startX + 50, y + 40, (rectWidth * 3) - 100, rectHeight + 10);
   
@@ -171,9 +179,9 @@ function drawLine(x, y, x1, y1) {
 }
 
 function drawSplitCircle(x, y, diameter) {
-  let green = '#6F8F6A';
-  let red = '#C15B5C';
-  fill(green);
+  let orange = '#FF8C00';
+  let red = '#FFD700';
+  fill(orange);
   arc(x, y, diameter, diameter, PI, 0);
   fill(red);
   arc(x, y, diameter, diameter, 0, PI);
@@ -182,9 +190,9 @@ function drawSplitCircle(x, y, diameter) {
 }
 
 function drawSplitCircleLR(x, y, diameter) {
-  let green = '#6F8F6A';
-  let red = '#C15B5C';
-  fill(green);
+  let orange = '#FF8C00';
+  let red = '#FFD700';
+  fill(orange);
   arc(x, y, diameter, diameter, HALF_PI, HALF_PI + PI);
   fill(red);
   arc(x, y, diameter, diameter, HALF_PI + PI, HALF_PI);
@@ -193,16 +201,17 @@ function drawSplitCircleLR(x, y, diameter) {
 }
 
 function drawSplitCircleTopRed(x, y, diameter) {
-  let green = '#6F8F6A';
-  let red = '#C15B5C';
+  let orange = '#FF8C00';
+  let red = '#FFD700';
   fill(red);
   arc(x, y, diameter, diameter, PI, 0);
-  fill(green);
+  fill(orange);
   arc(x, y, diameter, diameter, 0, PI);
   noFill();
   ellipse(x, y, diameter, diameter);
 }
 
+//Updates and paints firework particle effects
 function drawFireworks() {
   particles.forEach((p) => {
     p.step();
@@ -211,6 +220,7 @@ function drawFireworks() {
   particles = particles.filter((p) => p.isAlive);
 }
 
+//Define classes for particles and fireworks that are used to implement particle movement and drawing logic
 class Particle {
   constructor(x, y, xSpeed, ySpeed, pColor, size) {
     this.x = x;
@@ -240,7 +250,6 @@ class Particle {
     }
   }
 
-// Drawing a single-color circle
   draw() {
     this.drawTrail();
     fill(this.color);
@@ -255,7 +264,7 @@ class Particle {
       const tColor = lerpColor(color(this.color), endColor, index / this.trail.length);
       fill(tColor);
       noStroke();
-      ellipse(this.trail[i].x, this.trail[i].y, this.size, this.size); // Drawing a single-color circle
+      ellipse(this.trail[i].x, this.trail[i].y, this.size, this.size);
       index++;
     }
 
@@ -263,7 +272,7 @@ class Particle {
       const tColor = lerpColor(color(this.color), endColor, index / this.trail.length);
       fill(tColor);
       noStroke();
-      ellipse(this.trail[i].x, this.trail[i].y, this.size, this.size); // Drawing a single-color circle
+      ellipse(this.trail[i].x, this.trail[i].y, this.size, this.size);
       index++;
     }
   }
@@ -282,18 +291,17 @@ class Firework extends Particle {
     if (this.countdown <= 0) {
       const explosionSize = random(20, 55);
       for (let i = 0; i < explosionSize; i++) {
-        const speed = random(8, 10);
+        const speed = random(8, 15);
         const angle = random(TWO_PI);
         const xSpeed = cos(angle) * speed;
         const ySpeed = sin(angle) * speed;
 
-        particles.push(new Particle(this.x, this.y, xSpeed, ySpeed, random(colors), 5)); // Random color selection
+        particles.push(new Particle(this.x, this.y, xSpeed, ySpeed, random(colors), 12));
       }
       this.isAlive = false;
     }
   }
 }
-
 
 
 
