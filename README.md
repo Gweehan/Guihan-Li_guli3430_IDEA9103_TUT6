@@ -51,7 +51,7 @@ Through this design, I want the joy of the harvest and let the audience feel the
 
     - **Technical explanation**
         - **Creating Classes**:
-            The author created a Particle class to define the properties and behavior of particles. Each particle has properties such as position, velocity, color and size, and a STEP method for updating the position and state of the particle. I have also created a Particle class in my code that defines the properties of the particles and uses the step method to update the position of the particles so that they fall under the influence of gravity.
+            The author created a Particle class to define the properties and behavior of particles. Each particle has properties such as position, velocity, color and size, and a step method for updating the position and state of the particle. I have also created a Particle class in my code that defines the properties of the particles and uses the step method to update the position of the particles so that they fall under the influence of gravity.
 
          - **Fireworks explosion effect**:
             The fireworks in this work are realized by creating a fireworks class inherited from the particle class. The Firework class contains a countdown timer, and when the countdown is over, the fireworks explode, generating more particles. In my code, I have also created a fireworks class that uses the countdown mechanism to control the fireworks explosion and generate multiple particles. These particles will be randomly distributed in the air and gradually fall to simulate the real fireworks effect.
