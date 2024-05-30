@@ -2,7 +2,7 @@
 
 ## **Instructions on how to interact with the work**
 1. **Loading page**
-Open your browser and navigate to the page containing the code via Live Sever. Please wait for the page to fully load, at which point you will see my work.
+Open my code and navigate to the page containing the code via Live Sever. Please wait for the page to fully load, at which point you will see my work.
 
 2. **Using Keyboard Interaction**
 - Pressing the Up Arrow key moves the center of the canvas up.
@@ -30,10 +30,6 @@ Mouse Click: Click anywhere on the canvas to generate fireworks. Each click will
 ![Fall](Fall.jpg)
 
 The piece we chose to restore was 'Apple Tree'. I was initially inspired by the theme of celebrating the fall harvest, so I collected many images of fall, including golden leaves, harvest fruits and other elements. In my country, fireworks are often set off for major celebrations, such as the Chinese New Year. For farmers, the harvest is the most joyful time, so I decided to use fireworks as the primary visual element to show the joy of the harvest and the atmosphere of celebration.
-
-In this work, I aim to create an atmosphere of joy and harvest through dynamic fireworks effects and autumn colors. The fireworks in the picture not only symbolize the warm atmosphere of the celebration but also express gratitude for the harvest and the expectations for the future. Each mouse click generates fireworks on the canvas, which will bloom in the air and form colorful particles, as if the fruits of the harvest are flying in the air, symbolizing the joy of the harvest and good wishes for the future.
-
-Through this design, I want the joy of the harvest and let the audience feel the immersive atmosphere of celebration. Each interaction is full of surprise and anticipation, just like the endless hope and joy that the harvest season brings. Through the combination of fireworks and fall elements, my work highlights the theme of harvest and the hope for life and the future.
 
 4. The parts of my code that primarily animate the image include the fireworks effect and the movement of the center of the canvas. I made larger changes to increase interactivity and dynamic effects than the initial group code. By making these improvements, my code added richer dynamic effects and user interactivity, making the work visually more vivid and distinctly different from the work of other group members. While other group members' work may focus on color changes or component resizing of static images, my work enhances the overall interactive experience and visual impact through fireworks effects and dynamic changes in canvas position.
 
