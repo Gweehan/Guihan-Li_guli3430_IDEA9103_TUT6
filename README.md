@@ -29,7 +29,7 @@ Mouse Click: Click anywhere on the canvas to generate fireworks. Each click will
 3. My inspiration is as follows:
 ![Fall](Fall.jpg)
 
-The piece we chose to restore was 'Apple Tree'. I was initially inspired by the theme of celebrating the fall harvest, so I collected many images of fall, including golden leaves, harvest fruits and other elements. In my country, fireworks are often set off for major celebrations, such as the Chinese New Year. For farmers, the harvest is the most joyful time, so I decided to use fireworks as the primary visual element to show the joy of the harvest and the atmosphere of celebration.
+   The piece we chose to restore was 'Apple Tree'. I was initially inspired by the theme of celebrating the fall harvest, so I collected many images of fall, including golden leaves, harvest fruits and other elements. In my country, fireworks are often set off for major celebrations, such as the Chinese New Year. For farmers, the harvest is the most joyful time, so I decided to use fireworks as the primary visual element to show the joy of the harvest and the atmosphere of celebration.
 
 4. The parts of my code that primarily animate the image include the fireworks effect and the movement of the center of the canvas. I made larger changes to increase interactivity and dynamic effects than the initial group code. By making these improvements, my code added richer dynamic effects and user interactivity, making the work visually more vivid and distinctly different from the work of other group members. While other group members' work may focus on color changes or component resizing of static images, my work enhances the overall interactive experience and visual impact through fireworks effects and dynamic changes in canvas position.
 
