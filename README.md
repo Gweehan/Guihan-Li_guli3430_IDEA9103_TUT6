@@ -2,6 +2,7 @@
 
 ## **Instructions on how to interact with the work**
 1. **Loading page**
+
 Open my code and navigate to the page containing the code via Live Sever. Please wait for the page to fully load, at which point you will see my work.
 
 2. **Using Keyboard Interaction**
